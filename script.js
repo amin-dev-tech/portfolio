@@ -1,3 +1,4 @@
+// drawing animation
 let ctx = document.querySelector("canvas").getContext("2d"),
   dashLen = 220,
   dashOffset = dashLen,
@@ -28,3 +29,57 @@ ctx.strokeStyle = ctx.fillStyle = "#faf0ca";
     if (i < txt.length) requestAnimationFrame(loop);
   }
 })();
+
+// modal certificates
+
+const modal = document.querySelector(".certificates__modal");
+const modalImg = document.querySelector(".certificates__modal-img");
+const progCard = document.querySelectorAll(".certificates__card");
+const closeModal = document.getElementById("close");
+const background = document.getElementById("overlay");
+
+progCard.forEach((card) => {
+  card.addEventListener("click", () => {
+    if (card.id === "prog") {
+      modalImg.src = "assets/amin-python.png";
+    }
+
+    if (card.id === "data") {
+      modalImg.src = "assets/amin-data-science.png";
+    }
+
+    if (card.id === "sql") {
+      modalImg.src = "assets/amin-mssql.png";
+    }
+
+    modal.style.transform = "translate(-50%, -50%) scale(1)";
+    modal.style.opacity = "1";
+    background.classList.add("overlay");
+
+    progCard.forEach((card) => {
+      card.style.pointerEvents = "none";
+    });
+  });
+});
+
+closeModal.addEventListener("click", () => {
+  modal.style.transform = "translate(-50%, -50%) scale(0)";
+  background.classList.remove("overlay");
+  modal.style.opacity = "0";
+
+  progCard.forEach((card) => {
+    card.style.pointerEvents = "auto";
+  });
+});
+
+window.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && modal.style.opacity === "1") {
+    modal.style.transform = "translate(-50%, -50%) scale(0)";
+    background.classList.remove("overlay");
+    modal.style.opacity = "0";
+
+    progCard.forEach((card) => {
+      card.style.pointerEvents = "auto";
+    });
+  }
+});
