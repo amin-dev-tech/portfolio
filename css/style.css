@@ -6,6 +6,39 @@
     opacity: 1;
     transform: translate(-50%, -50%); } }
 
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(8rem); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-8rem); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
+@keyframes moveInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(-8rem); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
+.moveInRight {
+  animation: moveInRight 1s ease-in; }
+
+.moveInLeft {
+  animation: moveInLeft 1s ease-in -0.4s; }
+
+.moveInUp {
+  animation: moveInUp 1s ease-in; }
+
 * {
   margin: 0;
   padding: 0;
@@ -61,6 +94,9 @@ html {
 .u-hover-heading:hover {
   transform: scaleX(1.2) skew(6deg) rotate(-0.5deg);
   text-shadow: -1px 15px 15px #000; }
+
+.u-hidden {
+  visibility: hidden; }
 
 .btn {
   display: flex;
@@ -181,7 +217,8 @@ canvas {
 .skills {
   -webkit-clip-path: inset(0 7% 0 7%);
   clip-path: inset(0 7% 0 7%);
-  background-color: #0d3b66; }
+  background-color: #0d3b66;
+  height: 145vh; }
   .skills h1 {
     padding-top: 4rem; }
   .skills__container {
@@ -245,7 +282,14 @@ canvas {
   padding: 1.3rem;
   border-radius: 0.2rem;
   transition: all 0.25s;
-  background-color: #0d3b66; }
+  background-color: #0d3b66;
+  animation-fill-mode: backwards; }
+  .projects__card:nth-child(2) {
+    animation-delay: 0.5s; }
+  .projects__card:nth-child(3) {
+    animation-delay: 1s; }
+  .projects__card:nth-child(4) {
+    animation-delay: 1.5s; }
   .projects__card:hover {
     transform: translateY(-1rem);
     box-shadow: 0 10px 20px #000; }
@@ -295,7 +339,12 @@ canvas {
     transition: all 0.25s;
     background-color: #fff;
     text-align: center;
-    cursor: pointer; }
+    cursor: pointer;
+    animation-fill-mode: backwards; }
+    .certificates__card:nth-child(2) {
+      animation-delay: 0.5s; }
+    .certificates__card:nth-child(3) {
+      animation-delay: 1s; }
     .certificates__card:hover {
       transform: translateY(-1rem);
       box-shadow: 0 10px 20px #000; }
