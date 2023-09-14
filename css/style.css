@@ -364,7 +364,9 @@ canvas {
           margin-right: 0;
           justify-content: center; } }
     .skills__container img {
-      width: 5rem; }
+      width: 5rem;
+      position: relative;
+      z-index: 2000; }
       @media (max-width: 112.5em) {
         .skills__container img {
           width: 4.5rem; } }
