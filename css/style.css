@@ -98,11 +98,13 @@ html {
   text-transform: uppercase;
   font-weight: 600;
   line-height: 3rem; }
-  @media (max-width: 37.5em) {
-    .paragraph {
-      font-size: 1.8rem;
-      font-weight: 500;
-      line-height: normal; } }
+
+.phone-heading {
+  text-align: center;
+  color: #0d3b66 !important; }
+  @media (min-width: 600px) {
+    .phone-heading {
+      visibility: hidden; } }
 
 .u-margin-left-medium {
   margin-left: 8rem; }
@@ -154,17 +156,21 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    column-gap: 3rem; }
+    column-gap: 3rem;
+    z-index: 1000; }
     .header__nav:last-child {
       margin-left: auto; }
     @media (max-width: 37.5em) {
       .header__nav {
         flex-wrap: wrap;
         row-gap: 3rem;
-        width: 100%;
-        padding: 3rem; }
+        width: 50%; }
         .header__nav :last-child {
           margin-left: 0; } }
+    @media (max-width: 420px) {
+      .header__nav {
+        width: 100%;
+        padding: 3rem; } }
     .header__nav img {
       transition: all 0.35s;
       width: 5rem;
@@ -220,7 +226,7 @@ canvas {
   transform: translate(-50%, -50%); }
   @media (max-width: 37.5em) {
     canvas {
-      margin-top: 2rem; } }
+      visibility: hidden; } }
 
 .about {
   -webkit-clip-path: inset(0 7% 0 7%);
@@ -274,13 +280,17 @@ canvas {
       @media (max-width: 112.5em) {
         .about__imgContainer-img {
           height: 27rem; } }
-      .about__imgContainer-img:hover {
-        filter: blur(1.5px) brightness(65%);
-        --webkit-filter: blur(1.5px) brightness(65%);
-        transform: scale(0.9); }
-      .about__imgContainer-img:hover + .about__imgContainer-img--caption {
-        opacity: 1;
-        top: 45%; }
+      @media (min-width: 600px) {
+        .about__imgContainer-img:hover {
+          filter: blur(1.5px) brightness(65%);
+          --webkit-filter: blur(1.5px) brightness(65%);
+          transform: scale(0.9); }
+        .about__imgContainer-img:hover + .about__imgContainer-img--caption {
+          opacity: 1;
+          top: 45%; } }
+      @media (max-width: 75em) {
+        .about__imgContainer-img {
+          margin-top: 3rem; } }
       .about__imgContainer-img--caption {
         text-align: center;
         border-radius: 50%;
