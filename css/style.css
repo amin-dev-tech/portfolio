@@ -328,6 +328,16 @@ canvas {
           margin-left: 15rem;
           margin-right: 15rem;
           font-size: 3.6rem; } }
+      @media (max-width: 56.25em) {
+        .skills__container-caption {
+          text-align: center;
+          margin-left: 10rem;
+          margin-right: 10rem; } }
+      @media (max-width: 37.5em) {
+        .skills__container-caption {
+          margin-left: 5rem;
+          margin-right: 5rem;
+          font-size: 3rem; } }
     .skills__container-logos {
       position: relative;
       display: flex;
@@ -336,7 +346,8 @@ canvas {
       column-gap: 3rem;
       margin-top: 5rem;
       margin-right: 40rem;
-      list-style: none; }
+      list-style: none;
+      z-index: 2000; }
       @media (max-width: 112.5em) {
         .skills__container-logos {
           margin-right: 30rem;
@@ -348,6 +359,10 @@ canvas {
         .skills__container-logos {
           margin-right: 15rem;
           column-gap: 2rem; } }
+      @media (max-width: 56.25em) {
+        .skills__container-logos {
+          margin-right: 0;
+          justify-content: center; } }
     .skills__container img {
       width: 5rem; }
       @media (max-width: 112.5em) {
@@ -356,10 +371,16 @@ canvas {
       @media (max-width: 75em) {
         .skills__container img {
           width: 4rem; } }
-      .skills__container img:hover + span {
-        right: 65%;
-        opacity: 1;
-        visibility: visible; }
+      @media (min-width: 900px) {
+        .skills__container img:hover + span {
+          right: 65%;
+          opacity: 1;
+          visibility: visible; } }
+      @media (max-width: 56.25em) {
+        .skills__container img:hover + span {
+          top: 200%;
+          opacity: 1;
+          visibility: visible; } }
   .skills__skillname {
     font-style: italic;
     transition: all 0.25s;
@@ -371,7 +392,14 @@ canvas {
     right: 36%;
     visibility: hidden;
     opacity: 0;
-    z-index: -2000; }
+    z-index: 1500; }
+    @media (max-width: 56.25em) {
+      .skills__skillname {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 2.5rem;
+        font-weight: 400; } }
 
 .projects {
   -webkit-clip-path: inset(0 7% 0 7%);
@@ -444,6 +472,9 @@ canvas {
     display: flex;
     align-items: center;
     justify-content: center; }
+    @media (max-width: 56.25em) {
+      .certificates h3 {
+        font-size: 2rem; } }
   .certificates__container {
     display: flex;
     justify-content: center;
@@ -506,6 +537,12 @@ canvas {
     .certificates__modal-img {
       width: 60rem;
       cursor: default; }
+      @media (max-width: 56.25em) {
+        .certificates__modal-img {
+          width: 50rem; } }
+      @media (max-width: 37.5em) {
+        .certificates__modal-img {
+          width: 40rem; } }
 
 .overlay {
   --webkit-filter: blur(3px) brightness(70%);
