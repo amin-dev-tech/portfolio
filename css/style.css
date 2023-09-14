@@ -100,7 +100,9 @@ html {
   line-height: 3rem; }
   @media (max-width: 37.5em) {
     .paragraph {
-      font-size: 1.8rem; } }
+      font-size: 1.8rem;
+      font-weight: 500;
+      line-height: normal; } }
 
 .u-margin-left-medium {
   margin-left: 8rem; }
@@ -158,7 +160,9 @@ html {
     @media (max-width: 37.5em) {
       .header__nav {
         flex-wrap: wrap;
-        row-gap: 3rem; }
+        row-gap: 3rem;
+        width: 100%;
+        padding: 3rem; }
         .header__nav :last-child {
           margin-left: 0; } }
     .header__nav img {
@@ -214,6 +218,9 @@ canvas {
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%); }
+  @media (max-width: 37.5em) {
+    canvas {
+      margin-top: 2rem; } }
 
 .about {
   -webkit-clip-path: inset(0 7% 0 7%);
@@ -249,7 +256,7 @@ canvas {
     @media (max-width: 37.5em) {
       .about__text {
         line-height: 3rem;
-        padding: 3rem; } }
+        padding: 2rem; } }
   .about__imgContainer {
     position: relative; }
     @media (max-width: 112.5em) {
@@ -363,6 +370,9 @@ canvas {
         .skills__container-logos {
           margin-right: 0;
           justify-content: center; } }
+      @media (max-width: 37.5em) {
+        .skills__container-logos {
+          margin-top: 2rem; } }
     .skills__container img {
       width: 5rem;
       position: relative;
@@ -383,7 +393,12 @@ canvas {
           top: 200%;
           opacity: 1;
           visibility: visible; } }
+      @media (max-width: 37.5em) {
+        .skills__container img {
+          width: 3rem; } }
   .skills__skillname {
+    text-align: center;
+    width: 100%;
     font-style: italic;
     transition: all 0.25s;
     position: absolute;
@@ -544,7 +559,7 @@ canvas {
           width: 50rem; } }
       @media (max-width: 37.5em) {
         .certificates__modal-img {
-          width: 40rem; } }
+          width: 32rem; } }
 
 .overlay {
   --webkit-filter: blur(3px) brightness(70%);
@@ -586,7 +601,7 @@ canvas {
     @media (max-width: 37.5em) {
       .hobbies__text {
         line-height: 3rem;
-        padding: 3rem; } }
+        padding: 2rem; } }
   .hobbies__imgContainer {
     position: relative; }
     @media (max-width: 112.5em) {
