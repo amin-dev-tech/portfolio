@@ -398,7 +398,7 @@ canvas {
           width: 4rem; } }
       @media (min-width: 900px) {
         .skills__container img:hover + span {
-          right: 65%;
+          right: 15%;
           opacity: 1;
           visibility: visible; } }
       @media (max-width: 56.25em) {
@@ -418,8 +418,8 @@ canvas {
     color: #f4d35e;
     font-size: 3rem;
     font-weight: 600;
-    top: 16%;
-    right: 36%;
+    top: 0%;
+    right: 0%;
     visibility: hidden;
     opacity: 0;
     z-index: 1500; }
