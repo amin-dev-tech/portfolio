@@ -100,7 +100,8 @@ html {
   text-align: center;
   text-transform: uppercase;
   font-weight: 600;
-  line-height: 3rem; }
+  line-height: 3rem;
+  display: inline-block; }
 
 .phone-heading {
   text-align: center;
@@ -248,11 +249,17 @@ canvas {
       .about__container {
         flex-direction: column; } }
   .about__text {
+    position: relative;
     color: #0d3b66;
     text-align: left !important;
     border-left: 2px solid #0d3b66;
-    padding-left: 1rem;
+    padding-left: 3rem;
     margin-left: 15rem; }
+    .about__text span {
+      position: absolute;
+      left: 0;
+      color: #ee964b;
+      font-size: 3rem; }
     @media (max-width: 75em) {
       .about__text {
         order: 2;
@@ -261,11 +268,12 @@ canvas {
       .about__text {
         padding: 5rem;
         border-left: none;
-        margin: 0; } }
+        margin: 0; }
+        .about__text span {
+          left: 1rem; } }
     @media (max-width: 37.5em) {
       .about__text {
-        line-height: 3rem;
-        padding: 2rem; } }
+        line-height: 3rem; } }
   .about__imgContainer {
     position: relative; }
     @media (max-width: 112.5em) {
@@ -460,6 +468,10 @@ canvas {
     .projects img:hover {
       -webkit-filter: grayscale(0);
       filter: grayscale(0); }
+    @media (max-width: 56.25em) {
+      .projects img {
+        -webkit-filter: grayscale(0);
+        filter: grayscale(0); } }
   .projects__card {
     border: 2px solid #ee964b;
     padding: 1.3rem;
@@ -527,6 +539,10 @@ canvas {
     .certificates__img:hover {
       -webkit-filter: grayscale(0);
       filter: grayscale(0); }
+    @media (max-width: 56.25em) {
+      .certificates__img {
+        -webkit-filter: grayscale(0);
+        filter: grayscale(0); } }
   .certificates__card {
     border: 2px solid #ee964b;
     padding: 1.3rem;
@@ -598,11 +614,17 @@ canvas {
         flex-direction: column;
         column-gap: 15rem; } }
   .hobbies__text {
+    position: relative;
     color: #0d3b66;
     text-align: left !important;
     border-left: 2px solid #0d3b66;
-    padding-left: 1rem;
+    padding-left: 3rem;
     margin-left: 15rem; }
+    .hobbies__text span {
+      position: absolute;
+      left: 0;
+      color: #ee964b;
+      font-size: 3rem; }
     @media (max-width: 75em) {
       .hobbies__text {
         order: 2;
@@ -611,11 +633,12 @@ canvas {
       .hobbies__text {
         padding: 5rem;
         border-left: none;
-        margin: 0; } }
+        margin: 0; }
+        .hobbies__text span {
+          left: 1rem; } }
     @media (max-width: 37.5em) {
       .hobbies__text {
-        line-height: 3rem;
-        padding: 2rem; } }
+        line-height: 3rem; } }
   .hobbies__imgContainer {
     position: relative; }
     @media (max-width: 112.5em) {
