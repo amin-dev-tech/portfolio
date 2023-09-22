@@ -154,7 +154,8 @@ html {
   padding-top: 50rem;
   position: relative;
   -webkit-clip-path: polygon(0 0, 100% 0, 93% 100%, 7% 100%);
-  clip-path: polygon(0 0, 100% 0, 93% 100%, 7% 100%); }
+  clip-path: polygon(0 0, 100% 0, 93% 100%, 7% 100%);
+  overflow: hidden; }
   @media (max-width: 75em) {
     .header {
       -webkit-clip-path: none;
@@ -241,7 +242,8 @@ canvas {
 
 .about {
   -webkit-clip-path: inset(0 7% 0 7%);
-  clip-path: inset(0 7% 0 7%); }
+  clip-path: inset(0 7% 0 7%);
+  overflow: hidden; }
   @media (max-width: 56.25em) {
     .about {
       -webkit-clip-path: none;
@@ -334,7 +336,8 @@ canvas {
   -webkit-clip-path: inset(0 7% 0 7%);
   clip-path: inset(0 7% 0 7%);
   background-color: #0d3b66;
-  margin-top: 5rem; }
+  margin-top: 5rem;
+  overflow: hidden; }
   @media (max-width: 56.25em) {
     .skills {
       -webkit-clip-path: none;
