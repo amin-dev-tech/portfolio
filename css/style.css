@@ -106,6 +106,9 @@ html {
   font-weight: 600;
   line-height: 3rem;
   display: inline-block; }
+  @media (max-width: 37.5em) {
+    .paragraph {
+      font-size: 1.9rem; } }
 
 .phone-heading {
   text-align: center;
@@ -277,7 +280,10 @@ canvas {
           left: 1rem; } }
     @media (max-width: 37.5em) {
       .about__text {
-        line-height: 3rem; } }
+        line-height: 3rem;
+        text-align: center !important; }
+        .about__text span {
+          visibility: hidden; } }
   .about__imgContainer {
     position: relative; }
     @media (max-width: 112.5em) {
@@ -600,23 +606,26 @@ canvas {
   filter: blur(3px) brightness(70%); }
 
 .hobbies {
-  padding-bottom: 10rem;
+  overflow: hidden;
+  padding-bottom: 8rem;
   -webkit-clip-path: inset(0 7% 0 7%);
   clip-path: inset(0 7% 0 7%); }
   @media (max-width: 56.25em) {
     .hobbies {
       -webkit-clip-path: none;
       clip-path: none; } }
+  @media (max-width: 37.5em) {
+    .hobbies {
+      padding-bottom: 2rem; } }
   .hobbies__container {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     flex-direction: row;
-    column-gap: 20rem; }
+    column-gap: 10rem; }
     @media (max-width: 75em) {
       .hobbies__container {
-        flex-direction: column;
-        column-gap: 15rem; } }
+        flex-direction: column; } }
   .hobbies__text {
     position: relative;
     color: #0d3b66;
@@ -642,7 +651,10 @@ canvas {
           left: 1rem; } }
     @media (max-width: 37.5em) {
       .hobbies__text {
-        line-height: 3rem; } }
+        line-height: 3rem;
+        text-align: center !important; }
+        .hobbies__text span {
+          visibility: hidden; } }
   .hobbies__imgContainer {
     position: relative; }
     @media (max-width: 112.5em) {
