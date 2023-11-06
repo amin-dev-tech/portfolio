@@ -3,7 +3,7 @@ let ctx = document.querySelector("canvas").getContext("2d"),
   dashLen = 220,
   dashOffset = dashLen,
   speed = 10,
-  txt = "AMIN FALLAHZADEH",
+  txt = "amin.dev.tech",
   x = 30,
   i = 0;
 
